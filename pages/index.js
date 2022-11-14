@@ -1,8 +1,8 @@
 import { Box, Button, TextField } from '@mui/material'
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import { useForm } from "react-hook-form"
 import { API } from '../utils/constants'
+import { MainLayout } from '../components/MainLayout'
+import styles from '../styles/MainLayout.module.css'
 
 export default function HomePage() {
 
@@ -43,12 +43,7 @@ export default function HomePage() {
 
 
   return (
-    <div className={styles.container}>
-      <Head>
-        <title>Live-chat</title>
-        <meta name="description" content="Виджет для техподдержки с базой знаний(F.A.Q.) и чатом" />
-        <meta charset="utf-8" />
-      </Head>
+    <MainLayout>
       <main>
         <Box
           sx={{
@@ -58,7 +53,8 @@ export default function HomePage() {
           <form id='messageForm' onSubmit={handleSubmit(onSubmit)} className={styles.form}>
 
             <Box><TextField id="outlined-basic" label="Name" variant="outlined"
-              {...register("name", { required: 'Поле с именем обязательно к заполнению' })}
+              {...register("name", { required: 'Напишите как к Вам обращаться' })}
+
             />
               <div style={{ height: 20, color: 'red', fontSize: '12px' }}>
                 {errors?.name && <p>{errors?.name?.message || "Error!"}</p>}
@@ -101,7 +97,6 @@ export default function HomePage() {
           </form>
         </Box>
       </main >
-    </div >
-
+    </MainLayout>
   )
 }
