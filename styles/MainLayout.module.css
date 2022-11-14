@@ -102,12 +102,23 @@
   font-size: 1.25rem;
   line-height: 1.5;
 }
+.form{
+  gap: 2em;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  padding: 2em;
 
+}
 .logo {
   height: 1em;
   margin-left: 0.5rem;
 }
-
+.errStyle{
+  height: 20;
+  color: 'red';
+  font-size: '12px';
+}
 @media (max-width: 600px) {
   .grid {
     width: 100%;
