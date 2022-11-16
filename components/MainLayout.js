@@ -4,6 +4,7 @@ import { Box } from '@mui/material'
 import styles from '../styles/MainLayout.module.css'
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import AdminPanelSettingsIcon from '@mui/icons-material/AdminPanelSettings';
 
 export function MainLayout ({ children }) {
     return (<> 
@@ -24,10 +25,10 @@ export function MainLayout ({ children }) {
         <nav>
             <Link href="/"><a><span className='icon'><SupportAgentIcon  sx={{fontSize:'35px'}}/></span></a></Link>
             <Link href="/faq"><a><span className='icon'><HelpOutlineIcon sx={{fontSize:'35px'}}/></span></a></Link>
+            <Link href="/user/login"><a><span className='icon'><AdminPanelSettingsIcon sx={{fontSize:'35px'}}/></span></a></Link>
          </nav>
          {children}
          </Box>
-    
     </div >
     <style jsx>{`
         nav {
