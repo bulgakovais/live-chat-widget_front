@@ -1,5 +1,6 @@
 import { API } from '../utils/constants'
 
+
 export default function AdminPage({posts}) {
 
     const defaultPosts = [{id:1, text:'Первый вопрос'}, {id:2, text:'Второй вопрос'}] // не отработала логика получения вопросов, поставила заглушку
