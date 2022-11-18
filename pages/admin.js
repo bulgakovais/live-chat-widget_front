@@ -1,14 +1,13 @@
 import { API } from '../utils/constants'
 
 
-export default function AdminPage({ posts }) {
+export default function AdminPage({posts}) {
 
-
-
+    const defaultPosts = [{id:1, text:'Первый вопрос'}, {id:2, text:'Второй вопрос'}] // не отработала логика получения вопросов, поставила заглушку
     return <>
         <p> Вопросы пользователей: </p>
         <ul>
-            {posts.map((element) =>
+            {defaultPosts.map((element) => // было posts.map
                 <li key={element.id}>{element.text}</li>
             )}
 

@@ -1,8 +1,6 @@
-import { Box, Button, TextField } from '@mui/material'
-import { useForm } from "react-hook-form"
-import { API } from '../utils/constants'
 import { MainLayout } from '../components/MainLayout'
-import styles from '../styles/MainLayout.module.css'
+//import { QuestionForm } from '../components/QuestionForm'
+import { ChatForm } from '../components/ChatForm'
 
 export default function HomePage() {
 
@@ -75,9 +73,12 @@ export default function HomePage() {
     else return false
   }
 
+
   return (
+    <>
     <MainLayout>
       <main>
+
         <Box
           sx={{
             height: '100%',
@@ -118,7 +119,12 @@ export default function HomePage() {
             <Button variant="outlined" type="submit" disabled={!isValid}>Отправить</Button>
           </form>
         </Box>
+
+        <ChatForm/>
+
       </main >
     </MainLayout>
+     </>
   )
+ 
 }
