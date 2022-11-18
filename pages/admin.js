@@ -1,6 +1,9 @@
 import { API } from '../utils/constants'
 
+
 export default function AdminPage({ posts }) {
+
+
 
     return <>
         <p> Вопросы пользователей: </p>
